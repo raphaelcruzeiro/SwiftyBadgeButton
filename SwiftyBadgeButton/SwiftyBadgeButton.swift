@@ -19,6 +19,14 @@ class SwiftyBadgeButton: UIButton {
         }
     }
     
+    var badgeText: String? {
+        didSet {
+            badgeLabel.text = badgeText
+            badgeLabel.sizeToFit()
+            layoutSubviews()
+        }
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
@@ -38,12 +46,15 @@ class SwiftyBadgeButton: UIButton {
         addSubview(badgeLabel)
         
         badgeLabel.frame.size = badgeSize
+        badgeLabel.hidden = true
+        badgeLabel.textAlignment = .Center
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
         badgeLabel.frame.origin = CGPoint(x: bounds.size.width - badgeLabel.bounds.size.width / 2, y: bounds.size.height - badgeLabel.bounds.size.height / 2)
+        badgeLabel.layer.cornerRadius = badgeLabel.bounds.size.height / 2
     }
     
 }
