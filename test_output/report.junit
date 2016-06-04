@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites tests='3' failures='0'>
+  <testsuite name='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' tests='3' failures='0'>
+    <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__should_have_the_badgeView_set' time='0.058'/>
+    <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__should_set_the_default_size_of_the_badge' time='0.002'/>
+    <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__should_position_the_badge_on_the_top_right_corner_of_the_button' time='0.002'/>
+  </testsuite>
+</testsuites>
