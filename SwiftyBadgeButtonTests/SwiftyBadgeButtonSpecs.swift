@@ -101,11 +101,15 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
                 }
                 
                 it("should adapt the badge width to the text size") {
-                    expect(sut.badgeLabel.bounds.size.width).to(beCloseTo(18, within: 1))
+                    expect(sut.badgeLabel.bounds.size.width).to(beCloseTo(29, within: 1))
                 }
                 
                 it("should adapt the badge origin to the new width") {
-                    expect(sut.badgeLabel.frame.origin.x).to(beCloseTo(31, within: 1))
+                    expect(sut.badgeLabel.frame.origin.x).to(beCloseTo(25.5, within: 1))
+                }
+                
+                it("should maintain the height") {
+                    expect(sut.badgeLabel.bounds.size.height).to(equal(15))
                 }
                 
                 context("when setting the badge text to nil") {
