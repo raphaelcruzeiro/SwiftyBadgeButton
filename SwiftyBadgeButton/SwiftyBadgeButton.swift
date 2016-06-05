@@ -8,18 +8,18 @@
 
 import Foundation
 
-class SwiftyBadgeButton: UIButton {
+public class SwiftyBadgeButton: UIButton {
 
-    let badgeLabel = UILabel()
+    public let badgeLabel = UILabel()
     
-    var badgeSize = CGSize(width: 15, height: 15) {
+    public var badgeSize = CGSize(width: 15, height: 15) {
         didSet {
             badgeLabel.frame.size = badgeSize
             layoutSubviews()
         }
     }
     
-    var badgeText: String? {
+    public var badgeText: String? {
         didSet {
             badgeLabel.hidden = badgeText == nil
             badgeLabel.text = badgeText
@@ -28,23 +28,23 @@ class SwiftyBadgeButton: UIButton {
         }
     }
     
-    var badgeBackgroundColor = UIColor.redColor() {
+    public var badgeBackgroundColor = UIColor.redColor() {
         didSet {
             badgeLabel.backgroundColor = badgeBackgroundColor
         }
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
     
-    init() {
+    public init() {
         super.init(frame: CGRectZero)
         setup()
     }
@@ -59,7 +59,7 @@ class SwiftyBadgeButton: UIButton {
         badgeLabel.backgroundColor = badgeBackgroundColor
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
         badgeLabel.frame.origin = CGPoint(x: bounds.size.width - badgeLabel.bounds.size.width / 2, y: bounds.size.height - badgeLabel.bounds.size.height / 2)
