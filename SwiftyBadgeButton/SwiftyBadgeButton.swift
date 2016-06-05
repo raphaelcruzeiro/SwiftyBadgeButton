@@ -9,7 +9,7 @@
 import Foundation
 
 public class SwiftyBadgeButton: UIButton {
-
+    
     public let badgeLabel = UILabel()
     
     public var animated = true
@@ -26,13 +26,18 @@ public class SwiftyBadgeButton: UIButton {
             badgeLabel.hidden = badgeText == nil
             badgeLabel.text = badgeText
             
+            setSize()
+            
             if animated {
-                badgeLabel.frame = CGRect(origin: CGPoint(x: frame.maxX, y: frame.maxY), size: CGSizeZero)
                 
-                UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.3, options: .CurveEaseInOut, animations: setSize, completion: nil)
+                let animations: () -> Void = { [weak badgeLabel] in
+                    badgeLabel?.layer.transform = CATransform3DMakeScale(1, 1, 1)
+                }
                 
-            } else {
-                setSize()
+                badgeLabel.layer.transform = CATransform3DMakeScale(0.1, 0.1, 0.1)
+                
+                UIView.animateWithDuration(0.5, delay: 0.2, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.3, options: .CurveEaseInOut, animations: animations, completion: nil)
+                
             }
         }
     }
