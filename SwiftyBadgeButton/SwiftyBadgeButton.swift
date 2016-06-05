@@ -23,6 +23,7 @@ public class SwiftyBadgeButton: UIButton {
     
     public var badgeText: String? {
         didSet {
+            let wasNil = badgeLabel.text == nil
             badgeLabel.hidden = badgeText == nil
             badgeLabel.text = badgeText
             
@@ -34,7 +35,9 @@ public class SwiftyBadgeButton: UIButton {
                     badgeLabel?.layer.transform = CATransform3DMakeScale(1, 1, 1)
                 }
                 
-                badgeLabel.layer.transform = CATransform3DMakeScale(0.1, 0.1, 0.1)
+                if wasNil {
+                    badgeLabel.layer.transform = CATransform3DMakeScale(0.1, 0.1, 0.1)
+                }
                 
                 UIView.animateWithDuration(0.5, delay: 0.2, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.3, options: .CurveEaseInOut, animations: animations, completion: nil)
                 
