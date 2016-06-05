@@ -36,7 +36,7 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
             
             it("should position the badge on the top right corner of the button") {
                 expect(sut.badgeLabel.frame.origin.x).to(beCloseTo(32.5, within: 0.1))
-                expect(sut.badgeLabel.frame.origin.y).to(beCloseTo(32.5, within: 0.1))
+                expect(sut.badgeLabel.frame.origin.y).to(beCloseTo(-7.5, within: 0.1))
             }
             
             it("should initially hide the badge") {
@@ -59,11 +59,29 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
                 expect(sut.badgeLabel.backgroundColor).to(equal(UIColor.redColor()))
             }
             
+            it("should set the default font") {
+                expect(sut.badgeLabel.font.pointSize).to(equal(10))
+            }
+            
+            it("should set the default text color") {
+                expect(sut.badgeLabel.textColor).to(equal(UIColor.whiteColor()))
+            }
+            
             context("changing the badge's properties") {
             
                 it("should correctly change the background color") {
                     sut.badgeBackgroundColor = .greenColor()
                     expect(sut.badgeLabel.backgroundColor).to(equal(UIColor.greenColor()))
+                }
+                
+                it("should correctly change the badgeLabel font") {
+                    sut.badgeFont = UIFont.systemFontOfSize(9)
+                    expect(sut.badgeLabel.font.pointSize).to(equal(9))
+                }
+                
+                it("should correctly change the badgeLabel text color") {
+                    sut.badgeTextColor = .blueColor()
+                    expect(sut.badgeLabel.textColor).to(equal(UIColor.blueColor()))
                 }
                 
             }
@@ -83,11 +101,11 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
                 }
                 
                 it("should adapt the badge width to the text size") {
-                    expect(sut.badgeLabel.bounds.size.width).to(beCloseTo(28.6, within: 1))
+                    expect(sut.badgeLabel.bounds.size.width).to(beCloseTo(18, within: 1))
                 }
                 
                 it("should adapt the badge origin to the new width") {
-                    expect(sut.badgeLabel.frame.origin.x).to(beCloseTo(25.6, within: 1))
+                    expect(sut.badgeLabel.frame.origin.x).to(beCloseTo(31, within: 1))
                 }
                 
                 context("when setting the badge text to nil") {

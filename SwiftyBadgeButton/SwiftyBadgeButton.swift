@@ -34,6 +34,18 @@ public class SwiftyBadgeButton: UIButton {
         }
     }
     
+    public var badgeFont = UIFont.systemFontOfSize(10) {
+        didSet {
+            badgeLabel.font = badgeFont
+        }
+    }
+    
+    public var badgeTextColor = UIColor.whiteColor() {
+        didSet {
+            badgeLabel.textColor = badgeTextColor
+        }
+    }
+    
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
@@ -57,12 +69,14 @@ public class SwiftyBadgeButton: UIButton {
         badgeLabel.hidden = true
         badgeLabel.textAlignment = .Center
         badgeLabel.backgroundColor = badgeBackgroundColor
+        badgeLabel.font = badgeFont
+        badgeLabel.textColor = badgeTextColor
     }
     
     override public func layoutSubviews() {
         super.layoutSubviews()
         
-        badgeLabel.frame.origin = CGPoint(x: bounds.size.width - badgeLabel.bounds.size.width / 2, y: bounds.size.height - badgeLabel.bounds.size.height / 2)
+        badgeLabel.frame.origin = CGPoint(x: bounds.size.width - badgeLabel.bounds.size.width / 2, y: -badgeLabel.bounds.size.height / 2)
         badgeLabel.layer.cornerRadius = badgeLabel.bounds.size.height / 2
     }
     
