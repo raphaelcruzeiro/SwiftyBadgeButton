@@ -77,15 +77,9 @@ public class SwiftyBadgeButton: UIButton {
         super.layoutSubviews()
         
         if badgeText != nil {
-            let measuringLabel = UILabel()
-            measuringLabel.text = "8"
-            measuringLabel.font = badgeFont
-            measuringLabel.sizeToFit()
+            let padding = max(badgeSize.height - badgeLabel.frame.size.height, 0)
             
-            let oneLetterWidth = measuringLabel.bounds.size.width
-            let horizontalPadding = max(badgeLabel.bounds.width - oneLetterWidth, 0)
-            
-            badgeLabel.frame.size = CGSize(width: badgeLabel.bounds.size.width + horizontalPadding, height: badgeSize.height)
+            badgeLabel.frame.size = CGSize(width: max(badgeLabel.bounds.size.width + padding, 15), height: badgeSize.height)
         }
         
         badgeLabel.frame.origin = CGPoint(x: bounds.size.width - badgeLabel.bounds.size.width / 2, y: -badgeLabel.bounds.size.height / 2)

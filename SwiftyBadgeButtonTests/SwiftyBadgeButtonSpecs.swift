@@ -86,7 +86,46 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
                 
             }
             
-            context("when setting the badge's text") {
+            context("when setting the badge text") {
+                
+                beforeEach {
+                    sut.badgeText = "1"
+                }
+                
+                it("should set the badge text") {
+                    expect(sut.badgeLabel.text).to(equal("1"))
+                }
+                
+                it("should show the badge") {
+                    expect(sut.badgeLabel.hidden).to(beFalse())
+                }
+                
+                it("should adapt the badge width to the text size") {
+                    expect(sut.badgeLabel.bounds.size.width).to(beCloseTo(15, within: 1))
+                }
+                
+                it("should adapt the badge origin to the new width") {
+                    expect(sut.badgeLabel.frame.origin.x).to(beCloseTo(32.5, within: 1))
+                }
+                
+                it("should maintain the height") {
+                    expect(sut.badgeLabel.bounds.size.height).to(equal(15))
+                }
+                
+                context("when setting the badge text to nil") {
+                    
+                    beforeEach {
+                        sut.badgeText = nil
+                    }
+                    
+                    it("should hide the badge") {
+                        expect(sut.badgeLabel.hidden).to(beTrue())
+                    }
+                    
+                }
+            }
+            
+            context("when setting the badge text to more than one character") {
             
                 beforeEach {
                     sut.badgeText = "199"
@@ -101,11 +140,11 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
                 }
                 
                 it("should adapt the badge width to the text size") {
-                    expect(sut.badgeLabel.bounds.size.width).to(beCloseTo(29, within: 1))
+                    expect(sut.badgeLabel.bounds.size.width).to(beCloseTo(21, within: 1))
                 }
                 
                 it("should adapt the badge origin to the new width") {
-                    expect(sut.badgeLabel.frame.origin.x).to(beCloseTo(25.5, within: 1))
+                    expect(sut.badgeLabel.frame.origin.x).to(beCloseTo(29.5, within: 1))
                 }
                 
                 it("should maintain the height") {
