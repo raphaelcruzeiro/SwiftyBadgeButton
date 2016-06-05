@@ -21,9 +21,16 @@ class SwiftyBadgeButton: UIButton {
     
     var badgeText: String? {
         didSet {
+            badgeLabel.hidden = badgeText == nil
             badgeLabel.text = badgeText
             badgeLabel.sizeToFit()
             layoutSubviews()
+        }
+    }
+    
+    var badgeBackgroundColor = UIColor.redColor() {
+        didSet {
+            badgeLabel.backgroundColor = badgeBackgroundColor
         }
     }
     
@@ -46,8 +53,10 @@ class SwiftyBadgeButton: UIButton {
         addSubview(badgeLabel)
         
         badgeLabel.frame.size = badgeSize
+        badgeLabel.clipsToBounds = true
         badgeLabel.hidden = true
         badgeLabel.textAlignment = .Center
+        badgeLabel.backgroundColor = badgeBackgroundColor
     }
     
     override func layoutSubviews() {

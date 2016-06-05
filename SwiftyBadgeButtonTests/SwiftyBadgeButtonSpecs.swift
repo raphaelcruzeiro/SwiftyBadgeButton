@@ -51,6 +51,23 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
                 expect(sut.badgeLabel.textAlignment).to(equal(NSTextAlignment.Center))
             }
             
+            it("should set the badge's clipToBounds to true") {
+                expect(sut.badgeLabel.clipsToBounds).to(beTrue())
+            }
+            
+            it("should set the default background color") {
+                expect(sut.badgeLabel.backgroundColor).to(equal(UIColor.redColor()))
+            }
+            
+            context("changing the badge's properties") {
+            
+                it("should correctly change the background color") {
+                    sut.badgeBackgroundColor = .greenColor()
+                    expect(sut.badgeLabel.backgroundColor).to(equal(UIColor.greenColor()))
+                }
+                
+            }
+            
             context("when setting the badge's text") {
             
                 beforeEach {
@@ -59,6 +76,10 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
                 
                 it("should set the badge text") {
                     expect(sut.badgeLabel.text).to(equal("199"))
+                }
+                
+                it("should show the badge") {
+                    expect(sut.badgeLabel.hidden).to(beFalse())
                 }
                 
                 it("should adapt the badge width to the text size") {
