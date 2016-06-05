@@ -151,18 +151,6 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
                     expect(sut.badgeLabel.bounds.size.height).to(equal(15))
                 }
                 
-                context("when setting the badge text to nil") {
-                
-                    beforeEach {
-                        sut.badgeText = nil
-                    }
-                    
-                    it("should hide the badge") {
-                        expect(sut.badgeLabel.hidden).to(beTrue())
-                    }
-                    
-                }
-                
             }
             
         }

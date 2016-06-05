@@ -12,6 +12,8 @@ public class SwiftyBadgeButton: UIButton {
 
     public let badgeLabel = UILabel()
     
+    public var animated = true
+    
     public var badgeSize = CGSize(width: 15, height: 15) {
         didSet {
             badgeLabel.frame.size = badgeSize
@@ -23,8 +25,15 @@ public class SwiftyBadgeButton: UIButton {
         didSet {
             badgeLabel.hidden = badgeText == nil
             badgeLabel.text = badgeText
-            badgeLabel.sizeToFit()
-            layoutSubviews()
+            
+            if animated {
+                badgeLabel.frame = CGRect(origin: CGPoint(x: frame.maxX, y: frame.maxY), size: CGSizeZero)
+                
+                UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.3, options: .CurveEaseInOut, animations: setSize, completion: nil)
+                
+            } else {
+                setSize()
+            }
         }
     }
     
@@ -73,10 +82,9 @@ public class SwiftyBadgeButton: UIButton {
         badgeLabel.textColor = badgeTextColor
     }
     
-    override public func layoutSubviews() {
-        super.layoutSubviews()
-        
+    private func setSize() {
         if badgeText != nil {
+            badgeLabel.sizeToFit()
             let padding = max(badgeSize.height - badgeLabel.frame.size.height, 0)
             
             badgeLabel.frame.size = CGSize(width: max(badgeLabel.bounds.size.width + padding, 15), height: badgeSize.height)
@@ -84,6 +92,11 @@ public class SwiftyBadgeButton: UIButton {
         
         badgeLabel.frame.origin = CGPoint(x: bounds.size.width - badgeLabel.bounds.size.width / 2, y: -badgeLabel.bounds.size.height / 2)
         badgeLabel.layer.cornerRadius = badgeLabel.bounds.size.height / 2
+    }
+    
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+        setSize()
     }
     
 }
