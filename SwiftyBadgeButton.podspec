@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+                 SwiftyBadgeButton is a simple to use, 100% Swift, fully tested badge button.
                    DESC
 
   s.homepage     = "https://github.com/raphaelcruzeiro/SwiftyBadgeButton"
@@ -55,7 +56,7 @@ Pod::Spec.new do |s|
   s.author             = { "Raphael Cruzeiro" => "raphaelcruzeiro@raphaelcruzeiro.com" }
   # Or just: s.author    = "Raphael Cruzeiro"
   # s.authors            = { "Raphael Cruzeiro" => "raphaelcruzeiro@raphaelcruzeiro.com" }
-  # s.social_media_url   = "http://twitter.com/Raphael Cruzeiro"
+  # s.social_media_url   = "http://twitter.com/rcdeveloper"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -79,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/raphaelcruzeiro/SwiftyBadgeButton", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/raphaelcruzeiro/SwiftyBadgeButton.git", :tag => "0.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
