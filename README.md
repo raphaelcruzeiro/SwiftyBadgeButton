@@ -22,6 +22,7 @@ badgeButton.badgeText = "1"
 ## Properties
 
 - `animated` Sets whether the badge should animate upon setting a badgeText. _Default: true_
+- `badgeInset` Sets the insets and outsets for the badge
 - `badgeSize` Sets the default badge size. The width will grow automatically according to the text. The height will always stay the same. _Default: CGSize(width 15, height: 15)
 - `badgeBackgroundColor` Sets the badge background color. _Default: UIColor.redColor()_
 - `badgeFont` Sets the badge font. _Default: UIFont.systemFontOfSize(10)_
