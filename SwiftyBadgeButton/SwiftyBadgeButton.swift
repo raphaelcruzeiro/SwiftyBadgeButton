@@ -14,6 +14,12 @@ public class SwiftyBadgeButton: UIButton {
     
     public var animated = true
     
+    public var badgeInset = UIEdgeInsetsZero {
+        didSet {
+            setSize()
+        }
+    }
+    
     public var badgeSize = CGSize(width: 15, height: 15) {
         didSet {
             badgeLabel.frame.size = badgeSize
@@ -98,8 +104,14 @@ public class SwiftyBadgeButton: UIButton {
             badgeLabel.frame.size = CGSize(width: max(badgeLabel.bounds.size.width + padding, 15), height: badgeSize.height)
         }
         
-        badgeLabel.frame.origin = CGPoint(x: bounds.size.width - badgeLabel.bounds.size.width / 2, y: -badgeLabel.bounds.size.height / 2)
-        badgeLabel.layer.cornerRadius = badgeLabel.bounds.size.height / 2
+        let width = badgeLabel.frame.size.width - badgeInset.left + badgeInset.right
+        let height = badgeLabel.frame.size.height - badgeInset.top + badgeInset.bottom
+        
+        let x = (bounds.size.width - badgeLabel.bounds.size.width / 2) + badgeInset.left
+        let y = (-badgeLabel.bounds.size.height / 2) + badgeInset.top
+        
+        badgeLabel.frame = CGRect(x: x, y: y, width: width, height: height)
+        badgeLabel.layer.cornerRadius = height / 2
     }
     
     override public func layoutSubviews() {

@@ -67,6 +67,46 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
                 expect(sut.badgeLabel.textColor).to(equal(UIColor.whiteColor()))
             }
             
+            context("when adding an inset to the badge") {
+            
+                it("should correctly calculate x when there's a positive left inset") {
+                    sut.badgeInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
+                    expect(sut.badgeLabel.frame.origin.x).to(beCloseTo(37.5, within: 1))
+                    expect(sut.badgeLabel.frame.size.width).to(equal(10))
+                }
+                
+                it("should correctly calculate x when there's a negative left inset") {
+                    sut.badgeInset = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: 0)
+                    expect(sut.badgeLabel.frame.origin.x).to(beCloseTo(27.5, within: 1))
+                    expect(sut.badgeLabel.frame.size.width).to(equal(20))
+                }
+                
+                it("should correctly calculate x when there's a negative left inset and a negative right inset") {
+                    sut.badgeInset = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: -5)
+                    expect(sut.badgeLabel.frame.origin.x).to(beCloseTo(27.5, within: 1))
+                    expect(sut.badgeLabel.frame.size.width).to(equal(15))
+                }
+                
+                it("should correctly calculate x when there's a positive top inset") {
+                    sut.badgeInset = UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 0)
+                    expect(sut.badgeLabel.frame.origin.y).to(beCloseTo(-2.5, within: 1))
+                    expect(sut.badgeLabel.frame.size.height).to(equal(10))
+                }
+                
+                it("should correctly calculate x when there's a negative top inset") {
+                    sut.badgeInset = UIEdgeInsets(top: -5, left: 0, bottom: 0, right: 0)
+                    expect(sut.badgeLabel.frame.origin.y).to(beCloseTo(-12.5, within: 1))
+                    expect(sut.badgeLabel.frame.size.height).to(equal(20))
+                }
+                
+                it("should correctly calculate x when there's a negative top inset and a negative bottom inset") {
+                    sut.badgeInset = UIEdgeInsets(top: -5, left: 0, bottom: -5, right: 0)
+                    expect(sut.badgeLabel.frame.origin.y).to(beCloseTo(-12.5, within: 1))
+                    expect(sut.badgeLabel.frame.size.height).to(equal(15))
+                }
+                
+            }
+            
             context("changing the badge's properties") {
             
                 it("should correctly change the background color") {
