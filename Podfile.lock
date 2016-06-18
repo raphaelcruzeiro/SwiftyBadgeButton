@@ -4,12 +4,22 @@ PODS:
 
 DEPENDENCIES:
   - Nimble
-  - Quick
+  - Quick (from `git@github.com:sharplet/Quick.git`, branch `xcode-8`)
+
+EXTERNAL SOURCES:
+  Quick:
+    :branch: xcode-8
+    :git: git@github.com:sharplet/Quick.git
+
+CHECKOUT OPTIONS:
+  Quick:
+    :commit: 194e6540a95216c20453756abac61565ba2bc602
+    :git: git@github.com:sharplet/Quick.git
 
 SPEC CHECKSUMS:
   Nimble: 0f3c8b8b084cda391209c3c5efbb48bedeeb920a
-  Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
+  Quick: d61ff037eeb0b01bf53094a6b0c9184111c9e904
 
-PODFILE CHECKSUM: c6653171155cf8431486ad38568dcd932f2b809a
+PODFILE CHECKSUM: 1de4fea7251600814ff62604cdc4fec429072715
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.0.1
