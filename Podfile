@@ -9,8 +9,8 @@ target 'SwiftyBadgeButton' do
 
   target 'SwiftyBadgeButtonTests' do
     inherit! :search_paths
-    pod 'Quick', :git => 'git@github.com:sharplet/Quick.git', :branch => 'xcode-8'
-    pod 'Nimble', :git => 'git@github.com:norio-nomura/Nimble.git', :branch => 'nn-swift-3-compatibility'
+    pod 'Quick', :git => 'https://github.com/sharplet/Quick.git', :branch => 'xcode-8'
+    pod 'Nimble', :git => 'https://github.com/norio-nomura/Nimble.git', :branch => 'nn-swift-3-compatibility'
   end
 
 end
