@@ -5,9 +5,8 @@
 # scan --help
 
 # Remove the # in front of the line to enable the option
-
  scheme "SwiftyBadgeButton"
 
 # open_report true
 
-# clean true
+  clean true
