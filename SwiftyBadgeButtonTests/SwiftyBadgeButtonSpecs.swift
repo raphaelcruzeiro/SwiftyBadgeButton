@@ -40,7 +40,7 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
             }
             
             it("should initially hide the badge") {
-                expect(sut.badgeLabel.hidden).to(beTrue())
+                expect(sut.badgeLabel.isHidden).to(beTrue())
             }
             
             it("should set the cornerRadius of the badge to half of the badge's height") {
@@ -48,7 +48,7 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
             }
             
             it("should align the text on the center") {
-                expect(sut.badgeLabel.textAlignment).to(equal(NSTextAlignment.Center))
+                expect(sut.badgeLabel.textAlignment).to(equal(NSTextAlignment.center))
             }
             
             it("should set the badge's clipToBounds to true") {
@@ -56,7 +56,7 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
             }
             
             it("should set the default background color") {
-                expect(sut.badgeLabel.backgroundColor).to(equal(UIColor.redColor()))
+                expect(sut.badgeLabel.backgroundColor).to(equal(UIColor.red()))
             }
             
             it("should set the default font") {
@@ -64,7 +64,7 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
             }
             
             it("should set the default text color") {
-                expect(sut.badgeLabel.textColor).to(equal(UIColor.whiteColor()))
+                expect(sut.badgeLabel.textColor).to(equal(UIColor.white()))
             }
             
             context("when adding an inset to the badge") {
@@ -110,18 +110,18 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
             context("changing the badge's properties") {
             
                 it("should correctly change the background color") {
-                    sut.badgeBackgroundColor = .greenColor()
-                    expect(sut.badgeLabel.backgroundColor).to(equal(UIColor.greenColor()))
+                    sut.badgeBackgroundColor = .green()
+                    expect(sut.badgeLabel.backgroundColor).to(equal(UIColor.green()))
                 }
                 
                 it("should correctly change the badgeLabel font") {
-                    sut.badgeFont = UIFont.systemFontOfSize(9)
+                    sut.badgeFont = UIFont.systemFont(ofSize: 9)
                     expect(sut.badgeLabel.font.pointSize).to(equal(9))
                 }
                 
                 it("should correctly change the badgeLabel text color") {
-                    sut.badgeTextColor = .blueColor()
-                    expect(sut.badgeLabel.textColor).to(equal(UIColor.blueColor()))
+                    sut.badgeTextColor = .blue()
+                    expect(sut.badgeLabel.textColor).to(equal(UIColor.blue()))
                 }
                 
             }
@@ -137,7 +137,7 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
                 }
                 
                 it("should show the badge") {
-                    expect(sut.badgeLabel.hidden).to(beFalse())
+                    expect(sut.badgeLabel.isHidden).to(beFalse())
                 }
                 
                 it("should adapt the badge width to the text size") {
@@ -159,7 +159,7 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
                     }
                     
                     it("should hide the badge") {
-                        expect(sut.badgeLabel.hidden).to(beTrue())
+                        expect(sut.badgeLabel.isHidden).to(beTrue())
                     }
                     
                 }
@@ -176,7 +176,7 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
                 }
                 
                 it("should show the badge") {
-                    expect(sut.badgeLabel.hidden).to(beFalse())
+                    expect(sut.badgeLabel.isHidden).to(beFalse())
                 }
                 
                 it("should adapt the badge width to the text size") {

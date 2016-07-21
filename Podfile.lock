@@ -1,31 +1,31 @@
 PODS:
-  - Nimble (4.0.1)
+  - Nimble (5.0.0-alpha.30p1)
   - Quick (0.9.2)
 
 DEPENDENCIES:
-  - Nimble (from `git@github.com:Quick/Nimble.git`, branch `xcode-8`)
-  - Quick (from `git@github.com:sharplet/Quick.git`, branch `xcode-8`)
+  - Nimble (from `https://github.com/norio-nomura/Nimble.git`, branch `nn-swift-3-compatibility`)
+  - Quick (from `https://github.com/norio-nomura/Quick.git`, branch `nn-swift-3-compatibility`)
 
 EXTERNAL SOURCES:
   Nimble:
-    :branch: xcode-8
-    :git: git@github.com:Quick/Nimble.git
+    :branch: nn-swift-3-compatibility
+    :git: https://github.com/norio-nomura/Nimble.git
   Quick:
-    :branch: xcode-8
-    :git: git@github.com:sharplet/Quick.git
+    :branch: nn-swift-3-compatibility
+    :git: https://github.com/norio-nomura/Quick.git
 
 CHECKOUT OPTIONS:
   Nimble:
-    :commit: 38a99102e2c7d0b9d5568875f59a49593df8c595
-    :git: git@github.com:Quick/Nimble.git
+    :commit: 0dd42e0dac9f37962088e74ee78f0e3c412b227f
+    :git: https://github.com/norio-nomura/Nimble.git
   Quick:
-    :commit: 194e6540a95216c20453756abac61565ba2bc602
-    :git: git@github.com:sharplet/Quick.git
+    :commit: eaf60d980d88ffefd8c3a7515f53547453d5938b
+    :git: https://github.com/norio-nomura/Quick.git
 
 SPEC CHECKSUMS:
-  Nimble: 0f3c8b8b084cda391209c3c5efbb48bedeeb920a
-  Quick: d61ff037eeb0b01bf53094a6b0c9184111c9e904
+  Nimble: c5b995b4cd57789ec44b0cfb79640fc00e61a8c7
+  Quick: 19b5d0e23c18c06741e4f4b21b00c3101c78eeca
 
-PODFILE CHECKSUM: 092ddc4ea15c2f207539ebc588793db304610858
+PODFILE CHECKSUM: be1bfada3589455ea463040e0778e45839937bae
 
 COCOAPODS: 1.0.1
