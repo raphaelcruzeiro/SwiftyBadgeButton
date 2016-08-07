@@ -14,7 +14,7 @@ public class SwiftyBadgeButton: UIButton {
     
     public var animated = true
     
-    public var badgeInset = UIEdgeInsetsZero {
+    public var badgeInset = UIEdgeInsets.zero {
         didSet {
             setSize()
         }
@@ -51,7 +51,7 @@ public class SwiftyBadgeButton: UIButton {
         }
     }
     
-    public var badgeBackgroundColor = UIColor.red() {
+    public var badgeBackgroundColor = UIColor.red {
         didSet {
             badgeLabel.backgroundColor = badgeBackgroundColor
         }
@@ -63,7 +63,7 @@ public class SwiftyBadgeButton: UIButton {
         }
     }
     
-    public var badgeTextColor = UIColor.white() {
+    public var badgeTextColor = UIColor.white {
         didSet {
             badgeLabel.textColor = badgeTextColor
         }
