@@ -56,7 +56,7 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
             }
             
             it("should set the default background color") {
-                expect(sut.badgeLabel.backgroundColor).to(equal(UIColor.red()))
+                expect(sut.badgeLabel.backgroundColor).to(equal(UIColor.red))
             }
             
             it("should set the default font") {
@@ -64,7 +64,7 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
             }
             
             it("should set the default text color") {
-                expect(sut.badgeLabel.textColor).to(equal(UIColor.white()))
+                expect(sut.badgeLabel.textColor).to(equal(UIColor.white))
             }
             
             context("when adding an inset to the badge") {
@@ -110,8 +110,8 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
             context("changing the badge's properties") {
             
                 it("should correctly change the background color") {
-                    sut.badgeBackgroundColor = .green()
-                    expect(sut.badgeLabel.backgroundColor).to(equal(UIColor.green()))
+                    sut.badgeBackgroundColor = .green
+                    expect(sut.badgeLabel.backgroundColor).to(equal(UIColor.green))
                 }
                 
                 it("should correctly change the badgeLabel font") {
@@ -120,8 +120,8 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
                 }
                 
                 it("should correctly change the badgeLabel text color") {
-                    sut.badgeTextColor = .blue()
-                    expect(sut.badgeLabel.textColor).to(equal(UIColor.blue()))
+                    sut.badgeTextColor = .blue
+                    expect(sut.badgeLabel.textColor).to(equal(UIColor.blue))
                 }
                 
             }
