@@ -35,8 +35,8 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
             }
             
             it("should position the badge on the top right corner of the button") {
-                expect(Double(sut.badgeLabel.frame.origin.x)).to(beCloseTo(32.5, within: 0.1))
-                expect(Double(sut.badgeLabel.frame.origin.y)).to(beCloseTo(-7.5, within: 0.1))
+                expect(sut.badgeLabel.frame.origin.x).to(beCloseTo(32.5, within: 0.1))
+                expect(sut.badgeLabel.frame.origin.y).to(beCloseTo(-7.5, within: 0.1))
             }
             
             it("should initially hide the badge") {
@@ -44,7 +44,7 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
             }
             
             it("should set the cornerRadius of the badge to half of the badge's height") {
-                expect(Double(sut.badgeLabel.layer.cornerRadius)).to(beCloseTo(7.5, within: 0.1))
+                expect(sut.badgeLabel.layer.cornerRadius).to(beCloseTo(7.5, within: 0.1))
             }
             
             it("should align the text on the center") {
@@ -71,38 +71,38 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
             
                 it("should correctly calculate x when there's a positive left inset") {
                     sut.badgeInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
-                    expect(Double(sut.badgeLabel.frame.origin.x)).to(beCloseTo(37.5, within: 1))
+                    expect(sut.badgeLabel.frame.origin.x).to(beCloseTo(37.5, within: 1))
                     expect(sut.badgeLabel.frame.size.width).to(equal(10))
                 }
                 
                 it("should correctly calculate x when there's a negative left inset") {
                     sut.badgeInset = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: 0)
-                    expect(Double(sut.badgeLabel.frame.origin.x)).to(beCloseTo(27.5, within: 1))
+                    expect(sut.badgeLabel.frame.origin.x).to(beCloseTo(27.5, within: 1))
                     expect(sut.badgeLabel.frame.size.width).to(equal(20))
                 }
                 
                 it("should correctly calculate x when there's a negative left inset and a negative right inset") {
                     sut.badgeInset = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: -5)
-                    expect(Double(sut.badgeLabel.frame.origin.x)).to(beCloseTo(27.5, within: 1))
+                    expect(sut.badgeLabel.frame.origin.x).to(beCloseTo(27.5, within: 1))
                     expect(sut.badgeLabel.frame.size.width).to(equal(15))
                 }
                 
                 it("should correctly calculate x when there's a positive top inset") {
                     sut.badgeInset = UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 0)
-                    expect(Double(sut.badgeLabel.frame.origin.y)).to(beCloseTo(-2.5, within: 1))
+                    expect(sut.badgeLabel.frame.origin.y).to(beCloseTo(-2.5, within: 1))
                     expect(sut.badgeLabel.frame.size.height).to(equal(10))
                 }
                 
                 it("should correctly calculate x when there's a negative top inset") {
                     sut.badgeInset = UIEdgeInsets(top: -5, left: 0, bottom: 0, right: 0)
-                    expect(Double(sut.badgeLabel.frame.origin.y)).to(beCloseTo(-12.5, within: 1))
+                    expect(sut.badgeLabel.frame.origin.y).to(beCloseTo(-12.5, within: 1))
                     expect(sut.badgeLabel.frame.size.height).to(equal(20))
                 }
                 
                 it("should correctly calculate x when there's a negative top inset and a negative bottom inset") {
                     sut.badgeInset = UIEdgeInsets(top: -5, left: 0, bottom: -5, right: 0)
-                    expect(Double(sut.badgeLabel.frame.origin.y)).to(beCloseTo(-12.5, within: 1))
-                    expect(Double(sut.badgeLabel.frame.size.height)).to(equal(15))
+                    expect(sut.badgeLabel.frame.origin.y).to(beCloseTo(-12.5, within: 1))
+                    expect(sut.badgeLabel.frame.size.height).to(equal(15))
                 }
                 
             }
@@ -141,11 +141,11 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
                 }
                 
                 it("should adapt the badge width to the text size") {
-                    expect(Double(sut.badgeLabel.bounds.size.width)).to(beCloseTo(15, within: 1))
+                    expect(sut.badgeLabel.bounds.size.width).to(beCloseTo(15, within: 1))
                 }
                 
                 it("should adapt the badge origin to the new width") {
-                    expect(Double(sut.badgeLabel.frame.origin.x)).to(beCloseTo(32.5, within: 1))
+                    expect(sut.badgeLabel.frame.origin.x).to(beCloseTo(32.5, within: 1))
                 }
                 
                 it("should maintain the height") {
@@ -180,11 +180,11 @@ class SwiftyBadgeButtonSpecs: QuickSpec {
                 }
                 
                 it("should adapt the badge width to the text size") {
-                    expect(Double(sut.badgeLabel.bounds.size.width)).to(beCloseTo(21, within: 1))
+                    expect(sut.badgeLabel.bounds.size.width).to(beCloseTo(21, within: 1))
                 }
                 
                 it("should adapt the badge origin to the new width") {
-                    expect(Double(sut.badgeLabel.frame.origin.x)).to(beCloseTo(29.5, within: 1))
+                    expect(sut.badgeLabel.frame.origin.x).to(beCloseTo(29.5, within: 1))
                 }
                 
                 it("should maintain the height") {
