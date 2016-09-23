@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testsuites tests='36' failures='0'>
   <testsuite name='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' tests='36' failures='0'>
-    <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__should_have_the_badgeView_set' time='0.022'/>
+    <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__should_have_the_badgeView_set' time='0.024'/>
     <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__should_set_the_default_size_of_the_badge' time='0.002'/>
-    <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__should_position_the_badge_on_the_top_right_corner_of_the_button' time='0.005'/>
+    <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__should_position_the_badge_on_the_top_right_corner_of_the_button' time='0.004'/>
     <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__should_initially_hide_the_badge' time='0.001'/>
     <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__should_set_the_cornerRadius_of_the_badge_to_half_of_the_badge_s_height' time='0.001'/>
     <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__should_align_the_text_on_the_center' time='0.001'/>
     <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__should_set_the_badge_s_clipToBounds_to_true' time='0.001'/>
     <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__should_set_the_default_background_color' time='0.001'/>
     <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__should_set_the_default_font' time='0.001'/>
-    <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__should_set_the_default_text_color' time='0.002'/>
+    <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__should_set_the_default_text_color' time='0.001'/>
     <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__when_adding_an_inset_to_the_badge__should_correctly_calculate_x_when_there_s_a_positive_left_inset' time='0.001'/>
     <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__when_adding_an_inset_to_the_badge__should_correctly_calculate_x_when_there_s_a_negative_left_inset' time='0.001'/>
     <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__when_adding_an_inset_to_the_badge__should_correctly_calculate_x_when_there_s_a_negative_left_inset_and_a_negative_right_inset' time='0.001'/>
@@ -26,12 +26,12 @@
     <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__changing_the_badge_s_properties__should_correctly_change_the_background_color' time='0.001'/>
     <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__changing_the_badge_s_properties__should_correctly_change_the_badgeLabel_font' time='0.001'/>
     <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__changing_the_badge_s_properties__should_correctly_change_the_badgeLabel_text_color' time='0.001'/>
-    <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__when_setting_the_badge_text__should_set_the_badge_text' time='0.003'/>
+    <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__when_setting_the_badge_text__should_set_the_badge_text' time='0.005'/>
     <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__when_setting_the_badge_text__should_show_the_badge' time='0.001'/>
     <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__when_setting_the_badge_text__should_adapt_the_badge_width_to_the_text_size' time='0.001'/>
     <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__when_setting_the_badge_text__should_adapt_the_badge_origin_to_the_new_width' time='0.001'/>
     <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__when_setting_the_badge_text__should_maintain_the_height' time='0.001'/>
-    <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__when_setting_the_badge_text__when_setting_the_badge_text_to_nil__should_hide_the_badge' time='0.001'/>
+    <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__when_setting_the_badge_text__when_setting_the_badge_text_to_nil__should_hide_the_badge' time='0.002'/>
     <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__when_setting_the_badge_text_to_more_than_one_character__should_set_the_badge_text' time='0.001'/>
     <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__when_setting_the_badge_text_to_more_than_one_character__should_show_the_badge' time='0.001'/>
     <testcase classname='SwiftyBadgeButtonTests.SwiftyBadgeButtonSpecs' name='SwiftyBadgeButton__when_setting_the_badge_text_to_more_than_one_character__should_adapt_the_badge_width_to_the_text_size' time='0.001'/>
