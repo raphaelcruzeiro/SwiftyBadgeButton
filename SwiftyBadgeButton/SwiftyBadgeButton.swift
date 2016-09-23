@@ -14,7 +14,7 @@ public class SwiftyBadgeButton: UIButton {
     
     public var animated = true
     
-    public var badgeInset = UIEdgeInsetsZero {
+    public var badgeInset = UIEdgeInsets.zero {
         didSet {
             setSize()
         }
@@ -30,7 +30,7 @@ public class SwiftyBadgeButton: UIButton {
     public var badgeText: String? {
         didSet {
             let wasNil = badgeLabel.text == nil
-            badgeLabel.hidden = badgeText == nil
+            badgeLabel.isHidden = badgeText == nil
             badgeLabel.text = badgeText
             
             setSize()
@@ -45,25 +45,24 @@ public class SwiftyBadgeButton: UIButton {
                     badgeLabel.layer.transform = CATransform3DMakeScale(0.1, 0.1, 0.1)
                 }
                 
-                UIView.animateWithDuration(0.5, delay: 0.2, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.3, options: .CurveEaseInOut, animations: animations, completion: nil)
-                
+                UIView.animate(withDuration: 0.5, delay: 0.2, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.3, options: UIViewAnimationOptions(), animations: animations, completion: nil)
             }
         }
     }
     
-    public var badgeBackgroundColor = UIColor.redColor() {
+    public var badgeBackgroundColor = UIColor.red {
         didSet {
             badgeLabel.backgroundColor = badgeBackgroundColor
         }
     }
     
-    public var badgeFont = UIFont.systemFontOfSize(10) {
+    public var badgeFont = UIFont.systemFont(ofSize: 10) {
         didSet {
             badgeLabel.font = badgeFont
         }
     }
     
-    public var badgeTextColor = UIColor.whiteColor() {
+    public var badgeTextColor = UIColor.white {
         didSet {
             badgeLabel.textColor = badgeTextColor
         }
@@ -80,7 +79,7 @@ public class SwiftyBadgeButton: UIButton {
     }
     
     public init() {
-        super.init(frame: CGRectZero)
+        super.init(frame: CGRect.zero)
         setup()
     }
     
@@ -89,8 +88,8 @@ public class SwiftyBadgeButton: UIButton {
         
         badgeLabel.frame.size = badgeSize
         badgeLabel.clipsToBounds = true
-        badgeLabel.hidden = true
-        badgeLabel.textAlignment = .Center
+        badgeLabel.isHidden = true
+        badgeLabel.textAlignment = .center
         badgeLabel.backgroundColor = badgeBackgroundColor
         badgeLabel.font = badgeFont
         badgeLabel.textColor = badgeTextColor
