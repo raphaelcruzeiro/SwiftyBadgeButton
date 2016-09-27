@@ -4,5 +4,5 @@ install:
 - gem install cocoapods --pre
 - gem install scan
 script:
-- pod install
+- pod update
 - scan
