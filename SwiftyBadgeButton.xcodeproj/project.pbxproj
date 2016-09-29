@@ -140,6 +140,7 @@
 			buildConfigurationList = A0818F921D0262E200979BCB /* Build configuration list for PBXNativeTarget "SwiftyBadgeButton" */;
 			buildPhases = (
 				124C2F87FCDF8007822C985B /* [CP] Check Pods Manifest.lock */,
+				A00D3B021D9D4CD400EA40A4 /* ShellScript */,
 				A0818F791D0262E200979BCB /* Sources */,
 				A0818F7A1D0262E200979BCB /* Frameworks */,
 				A0818F7B1D0262E200979BCB /* Headers */,
@@ -280,6 +281,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftyBadgeButtonTests/Pods-SwiftyBadgeButtonTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		A00D3B021D9D4CD400EA40A4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		CBF8D29865AD1654A9D52A75 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
