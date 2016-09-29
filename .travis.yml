@@ -1,8 +1,10 @@
 language: objective-c
 osx_image: xcode8
 install:
+- ./install_swiftlint.sh
 - gem install cocoapods --pre
 - gem install scan
 script:
+- swiftlint
 - pod update
 - scan
