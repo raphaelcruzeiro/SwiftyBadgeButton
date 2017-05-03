@@ -2,9 +2,9 @@ language: objective-c
 osx_image: xcode8.3
 install:
 - ./install_swiftlint.sh
-- gem install cocoapods --pre
-- gem install scan
+- gem install bundler
+- bundle install
+- bundle exec pod repo update
 script:
 - swiftlint
-- pod update
-- scan
+- bundle exec fastlane test
