@@ -49,7 +49,7 @@ public class SwiftyBadgeButton: UIButton {
                                delay: 0.2,
                                usingSpringWithDamping: 0.3,
                                initialSpringVelocity: 0.3,
-                               options: UIViewAnimationOptions(),
+                               options: UIView.AnimationOptions(),
                                animations: animations,
                                completion: nil)
             }
