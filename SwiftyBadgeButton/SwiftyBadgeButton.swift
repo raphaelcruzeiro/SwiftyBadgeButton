@@ -113,10 +113,10 @@ public class SwiftyBadgeButton: UIButton {
         let width = badgeLabel.frame.size.width - badgeInset.left + badgeInset.right
         let height = badgeLabel.frame.size.height - badgeInset.top + badgeInset.bottom
 
-        let x = (bounds.size.width - badgeLabel.bounds.size.width / 2) + badgeInset.left
-        let y = (-badgeLabel.bounds.size.height / 2) + badgeInset.top
+        let xPos = (bounds.size.width - badgeLabel.bounds.size.width / 2) + badgeInset.left
+        let yPos = (-badgeLabel.bounds.size.height / 2) + badgeInset.top
 
-        badgeLabel.frame = CGRect(x: x, y: y, width: width, height: height)
+        badgeLabel.frame = CGRect(x: xPos, y: yPos, width: width, height: height)
         badgeLabel.layer.cornerRadius = height / 2
     }
 
